@@ -1,0 +1,40 @@
+<script setup lang="ts">
+
+const { data: projects } = await useAsyncData('projects', () => {
+  return queryCollection('projects')
+    .select('path', 'title', 'description', 'cover', 'tags', 'period', 'slug', 'github', 'demo', 'date')
+    .order('date', 'DESC')
+    .all()
+})
+
+useSeoMeta({
+  title: '專案',
+  description: '我在學習完成的一些專案。'
+})
+
+</script>
+
+<template>
+  <main class="max-w-2xl mx-auto space-y-8">
+    <div class="space-y-2">
+      <h1
+        class="text-2xl font-semibold"
+        href="#/projects"
+      >
+        專案
+      </h1>
+
+      <p class="text-gray-500 text-sm">
+        以下是我在學習完成的一些專案
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <ProjectCard
+        v-for="p in projects"
+        :key="p.slug"
+        v-bind="p"
+      />
+    </div>
+  </main>
+</template>

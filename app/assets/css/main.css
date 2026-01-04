@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@source "../../../content/**/*";
+
+@theme {
+  --font-sans: 'Noto Sans TC', sans-serif;
+}
+
+:root {
+  ::selection {
+    color: #ffffff;
+    background-color: rgb(173, 70, 255, 0.4);
+  }
+}
+
+.dark {
+  ::selection {
+    color: #ffffff;
+    background-color: rgb(173, 70, 255, 0.4);
+  }
+}
