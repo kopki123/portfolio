@@ -48,7 +48,6 @@ const startViewTransition = (event: MouseEvent) => {
       :icon="`${colorMode.value === 'dark' ? 'i-heroicons-moon' : 'i-heroicons-sun'}`"
       color="neutral"
       variant="ghost"
-      size="sm"
       @click="startViewTransition"
     />
 

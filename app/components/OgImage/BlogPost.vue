@@ -14,7 +14,6 @@ withDefaults(defineProps<{
     <div class="flex items-start justify-start h-full">
       <div class="flex flex-col justify-between w-full h-full">
         <h1 class="text-4xl p-20 font-black">
-          portfolio
           {{ title }}
         </h1>
         <p class="text-2xl pb-10 px-20 font-bold mb-0">

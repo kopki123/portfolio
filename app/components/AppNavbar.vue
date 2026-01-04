@@ -40,7 +40,21 @@ const links = [
         </UTooltip>
       </div>
 
-      <AppColorModeButton />
+
+      <div class="space-x-2">
+        <UButton
+          as="a"
+          href="/resume.pdf"
+          download
+          external
+          aria-label="Download resume"
+          icon="i-heroicons-arrow-down-tray"
+          color="neutral"
+          variant="ghost"
+        />
+
+        <AppColorModeButton />
+      </div>
     </nav>
   </div>
 </template>
