@@ -1,22 +1,22 @@
 <script setup lang="ts">
-const isVisible = ref(false)
+const isVisible = ref(false);
 
 const updateVisibility = () => {
-  isVisible.value = window.scrollY > 100
-}
+  isVisible.value = window.scrollY > 100;
+};
 
 const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 onMounted(() => {
-  updateVisibility()
-  window.addEventListener('scroll', updateVisibility, { passive: true })
-})
+  updateVisibility();
+  window.addEventListener('scroll', updateVisibility, { passive: true });
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', updateVisibility)
-})
+  window.removeEventListener('scroll', updateVisibility);
+});
 </script>
 
 <template>

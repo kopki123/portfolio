@@ -2,7 +2,7 @@
 useSeoMeta({
   title: '關於',
   description: '介紹我的背景與經歷。'
-})
+});
 </script>
 
 <template>

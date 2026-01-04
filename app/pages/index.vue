@@ -1,35 +1,35 @@
 <script setup lang="ts">
 
 const { data: home } = await useAsyncData('home', () => {
-  return queryCollection('home').first()
-})
+  return queryCollection('home').first();
+});
 
 const { data: projects } = await useAsyncData('home-projects', () => {
   return queryCollection('projects')
     .select('path', 'title', 'description', 'cover', 'tags', 'period', 'slug', 'github', 'demo', 'date')
     .order('date', 'DESC')
-    .all()
-})
+    .all();
+});
 
 const { data: articles } = await useAsyncData('home-articles', () => {
   return queryCollection('articles')
     .select('title', 'date', 'slug')
     .order('date', 'DESC')
-    .all()
-})
+    .all();
+});
 
-const featuredProjects = computed(() => projects.value?.slice(0, 2) ?? [])
-const latestArticles = computed(() => articles.value?.slice(0, 3) ?? [])
+const featuredProjects = computed(() => projects.value?.slice(0, 2) ?? []);
+const latestArticles = computed(() => articles.value?.slice(0, 3) ?? []);
 
 if (!home.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Home content not found' })
+  throw createError({ statusCode: 404, statusMessage: 'Home content not found' });
 }
 
-defineOgImageComponent('BlogPost')
+defineOgImageComponent('BlogPost');
 useSeoMeta({
   title: () => home.value?.title ?? '個人網站',
   description: () => home.value?.description ?? ''
-})
+});
 </script>
 
 <template>

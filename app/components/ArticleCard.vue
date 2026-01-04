@@ -3,7 +3,7 @@ defineProps<{
   slug: string
   title: string
   date: string
-}>()
+}>();
 
 </script>
 

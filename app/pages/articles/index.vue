@@ -3,13 +3,13 @@ const { data: articles } = await useAsyncData('articles', () => {
   return queryCollection('articles')
     .select('title', 'description', 'date', 'tags', 'slug')
     .order('date', 'DESC')
-    .all()
-})
+    .all();
+});
 
 useSeoMeta({
   title: '文章',
   description: '紀錄我的學習、靈感與實作過程。'
-})
+});
 </script>
 
 <template>

@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const route = useRoute()
-const path = computed(() => `/projects/${route.params.slug}`)
+const route = useRoute();
+const path = computed(() => `/projects/${route.params.slug}`);
 
 const { data: page } = await useAsyncData(path.value, () => {
-  return queryCollection('projects').path(path.value).first()
-})
+  return queryCollection('projects').path(path.value).first();
+});
 
 if (!page.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Not Found' })
+  throw createError({ statusCode: 404, statusMessage: 'Not Found' });
 }
 
 useSeoMeta({
   title: () => `${page.value!.title} | 專案`,
   description: () => page.value!.description || ''
-})
+});
 </script>
 
 <template>
@@ -66,7 +66,7 @@ useSeoMeta({
       :alt="page!.title"
       class="w-full rounded-lg border border-gray-200 dark:border-gray-800"
       loading="lazy"
-    />
+    >
 
     <p class="text-sm leading-8">
       {{ page!.description }}
