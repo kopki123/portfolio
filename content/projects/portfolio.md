@@ -9,8 +9,8 @@ tags:
   - TypeScript
   - Nuxt UI
   - Tailwind CSS
-github: "https://github.com/yourname/portfolio"
-demo: "https://your-domain.com"
+github: "https://github.com/kopki123/portfolio"
+demo: "https://portfolio-amber-six-97.vercel.app"
 cover: "/images/projects/portfolio.png"
 
 date: 2026-01-01T00:00:00.000Z
