@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     '@nuxt/ui',
     '@nuxtjs/seo',
+    'nuxt-gtag',
   ],
 
   css: ['~/assets/css/main.css'],
@@ -19,6 +20,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     fallback: 'light',
+  },
+
+  gtag: {
+    enabled: process.env.NODE_ENV === 'production',
+    id: process.env.NUXT_PUBLIC_GTAG_ID,
   },
 
   site: {
