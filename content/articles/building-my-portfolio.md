@@ -5,9 +5,9 @@ description: "簡要記錄這個 Portfolio 網站的設計方向、技術選擇�
 date: "2026-01-02T00:00:00.000Z"
 tags:
   - Portfolio
+  - Frontend
   - Nuxt
   - Vue 3
-  - Frontend
 ---
 
 Portfolio 網站的目標：

@@ -15,6 +15,16 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    },
+  },
+
+  routeRules: {
+    '/rss.xml': { prerender: true },
+  },
+
   css: ['~/assets/css/main.css'],
 
   colorMode: {

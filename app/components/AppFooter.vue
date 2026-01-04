@@ -15,7 +15,7 @@ const socials = computed(() => {
     {
       label: 'RSS',
       icon: 'i-simple-icons-rss',
-      url: '/',
+      url: '/rss.xml',
     },
   ];
 });

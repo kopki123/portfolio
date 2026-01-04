@@ -21,6 +21,7 @@
     "@unhead/vue": "^2.1.1",
     "better-sqlite3": "^12.5.0",
     "eslint": "^9.39.2",
+    "feed": "^5.1.0",
     "nuxt": "^4.2.2",
     "nuxt-gtag": "^4.1.0",
     "typescript": "^5.9.3",
