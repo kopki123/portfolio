@@ -108,6 +108,5 @@ useSeoMeta({
         />
       </div>
     </section>
-
   </main>
 </template>

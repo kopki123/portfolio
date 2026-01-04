@@ -22,7 +22,7 @@ const socials = computed(() => {
 </script>
 
 <template>
-  <footer class="flex items-center justify-between max-w-2xl w-full mx-auto mt-12 mb-6">
+  <footer class="flex items-center justify-between max-w-2xl w-full mx-auto mt-12 mb-6 px-4">
     <p class="text-sm text-gray-500">
       © {{ currentYear }}. All rights reserved.
     </p>

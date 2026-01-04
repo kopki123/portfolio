@@ -11,7 +11,6 @@ useSeoMeta({
   title: '專案',
   description: '我在學習完成的一些專案。'
 })
-
 </script>
 
 <template>

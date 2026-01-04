@@ -26,7 +26,6 @@ useSeoMeta({
       size="sm"
     />
 
-    <!-- Header -->
     <header class="space-y-3">
       <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <p class="text-2xl font-semibold">
@@ -48,7 +47,6 @@ useSeoMeta({
       />
     </div>
 
-    <!-- Markdown Content -->
     <ContentRenderer
       v-if="page"
       :value="page"
