@@ -28,7 +28,7 @@ const socials = computed(() => home.value?.socials ?? []);
           :href="item.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="underline"
+          class="underline underline-offset-4"
         >
           {{ item.label }}
         </a>
