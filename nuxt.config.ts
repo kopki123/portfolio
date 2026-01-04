@@ -22,8 +22,8 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://example.com',
-    name: 'My Site'
+    url: 'https://portfolio-amber-six-97.vercel.app',
+    name: 'Portfolio',
   },
 
   ogImage: {
