@@ -12,7 +12,7 @@ tags:
   - Tailwind CSS
 github: "https://github.com/kopki123/weather-dashboard"
 demo: "https://weather-dashboard-sepia-one.vercel.app"
-cover: "/images/projects/weather-dashboard.png"
+cover: "/images/projects/weather-dashboard.webp"
 
 date: 2025-12-30T00:00:00.000Z
 ---

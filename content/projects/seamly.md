@@ -14,7 +14,7 @@ tags:
   - ECPay
 github: "https://github.com/kopki123/seamly"
 demo: "https://seamly-h5sc.onrender.com"
-cover: "/images/projects/seamly.png"
+cover: "/images/projects/seamly.webp"
 
 date: 2025-12-28T00:00:00.000Z
 ---

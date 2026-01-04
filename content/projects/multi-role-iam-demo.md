@@ -14,7 +14,7 @@ tags:
   - ESLint
 github: "https://github.com/kopki123/Multi-Role-IAM-Demo"
 demo: "https://multi-role-iam-demo.vercel.app"
-cover: "/images/projects/multi-role-iam.png"
+cover: "/images/projects/multi-role-iam.webp"
 
 date: 2025-12-31T00:00:00.000Z
 ---
