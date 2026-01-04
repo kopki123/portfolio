@@ -25,15 +25,15 @@ useSeoMeta({
       </h1>
 
       <p class="text-gray-500 text-sm">
-        以下是我在學習完成的一些專案
+        以下是我在學習中完成的一些專案
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <ProjectCard
-        v-for="p in projects"
-        :key="p.slug"
-        v-bind="p"
+        v-for="project in projects"
+        :key="project.slug"
+        v-bind="project"
       />
     </div>
   </main>

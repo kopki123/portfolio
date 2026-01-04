@@ -1,6 +1,6 @@
 # Portfolio
 
-以 Nuxt 4、Nuxt UI 與 Nuxt Content 打造的作品集與部落格，集中展示專案、文章與聯絡方式。內容以 Markdown 維護，便於快速更新。
+以 Nuxt 4、Nuxt UI 與 Nuxt Content 打造的作品集，集中展示專案、文章與聯絡方式。內容以 Markdown 維護，便於快速更新。
 
 ## 功能與特色
 - Markdown 驅動內容：`@nuxt/content` 搭配 `content.config.ts` 的 zod schema，確保欄位完整。

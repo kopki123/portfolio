@@ -29,9 +29,9 @@ useSeoMeta({
 
     <div class="grid grid-cols-1 gap-6">
       <ArticleCard
-        v-for="a in articles"
-        :key="a.slug"
-        v-bind="a"
+        v-for="article in articles"
+        :key="article.slug"
+        v-bind="article"
       />
     </div>
   </main>

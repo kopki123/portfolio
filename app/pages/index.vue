@@ -25,6 +25,7 @@ if (!home.value) {
   throw createError({ statusCode: 404, statusMessage: 'Home content not found' })
 }
 
+defineOgImageComponent('BlogPost')
 useSeoMeta({
   title: () => home.value?.title ?? '個人網站',
   description: () => home.value?.description ?? ''
