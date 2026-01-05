@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const { data: home } = await useAsyncData('home', () => {
   return queryCollection('home').first();
 });

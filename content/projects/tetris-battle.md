@@ -15,6 +15,5 @@ tags:
 github: "https://github.com/kopki123/tetris-battle"
 demo: "https://tetris-battle.onrender.com"
 cover: "/images/projects/tetris-battle.webp"
-
 date: 2025-12-29T00:00:00.000Z
 ---

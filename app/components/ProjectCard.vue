@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <NuxtLink :to="`/projects/${slug}`">
-    <UCard class="h-full hover:cursor-pointer shadow-md hover:shadow-primary-300 dark:hover:shadow-primary-300/70">
+    <UCard class="h-full shadow-md hover:cursor-pointer hover:shadow-primary-300 dark:hover:shadow-primary-300/70">
       <p class="font-semibold">
         {{ title }}
       </p>

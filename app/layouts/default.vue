@@ -10,14 +10,12 @@ const route = useRoute();
   <div class="flex flex-col min-h-screen">
     <AppNavbar />
 
-    <Transition name="fade" mode="out-in" appear>
-      <div
-        :key="route.fullPath"
-        class="flex-1 max-w-2xl w-full mx-auto mt-26 px-4"
+    <div
+      :key="route.fullPath"
+      class="flex-1 max-w-2xl w-full mx-auto mt-26 px-4"
     >
-        <slot />
-      </div>
-    </Transition>
+      <slot />
+    </div>
 
     <AppFooter />
     <BackToTopButton />

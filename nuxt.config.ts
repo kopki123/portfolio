@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
+  sourcemap: {
+    server: true,
+    client: true,
+  },
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
@@ -48,7 +53,7 @@ export default defineNuxtConfig({
   },
 
   site: {
-    url: 'https://portfolio-amber-six-97.vercel.app',
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
     name: 'Portfolio',
   },
 
@@ -72,11 +77,5 @@ export default defineNuxtConfig({
   devServer: {
     host: '0.0.0.0',
     port: 3000,
-  },
-
-  eslint: {
-    config: {
-      // stylistic: true,
-    },
   },
 });
