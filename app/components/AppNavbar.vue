@@ -40,7 +40,6 @@ const links = [
         </UTooltip>
       </div>
 
-
       <div class="space-x-2">
         <UButton
           as="a"

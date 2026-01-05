@@ -5,23 +5,17 @@ type ExperienceItem = {
   period: string
 }
 
-const experiences: ExperienceItem[] = [
-  {
-    company: '玩藝國際股份有限公司',
-    role: '前端工程師',
-    period: '2025/09 — 現在'
-  },
-  {
-    company: '小熊科技有限公司',
-    role: '前端工程師',
-    period: '2025/03 — 2025/09'
-  },
-  {
-    company: '坂和企業有限公司',
-    role: '前端工程師',
-    period: '2021/12 — 2024/06'
-  },
-];
+const { data: about } = await useAsyncData('about-experiences', async () => {
+  return queryCollection('about')
+    .select('experiences')
+    .first();
+});
+
+if (!about.value) {
+  throw createError({ statusCode: 404, statusMessage: 'About content not found' });
+}
+
+const experiences = computed<ExperienceItem[]>(() => about.value?.experiences ?? []);
 </script>
 
 <template>

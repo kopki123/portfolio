@@ -21,6 +21,17 @@ export default defineContentConfig({
         })).optional().default([]),
       }),
     }),
+    about: defineCollection({
+      type: 'page',
+      source: 'about/*.md',
+      schema: z.object({
+        experiences: z.array(z.object({
+          company: z.string(),
+          role: z.string(),
+          period: z.string(),
+        })).default([]),
+      }),
+    }),
     projects: defineCollection({
       type: 'page',
       source: 'projects/*.md',

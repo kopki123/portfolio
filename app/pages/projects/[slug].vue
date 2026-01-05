@@ -60,13 +60,12 @@ useSeoMeta({
       </div>
     </header>
 
-    <!-- Image -->
-    <img
+    <NuxtImg
       :src="page!.cover"
       :alt="page!.title"
-      class="w-full rounded-lg border border-gray-200 dark:border-gray-800"
+      class="w-full rounded-lg border-4 border-gray-200"
       loading="lazy"
-    >
+    />
 
     <p class="text-sm leading-8">
       {{ page!.description }}
