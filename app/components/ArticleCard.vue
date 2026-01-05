@@ -16,7 +16,7 @@ defineProps<{
       {{ title }}
     </p>
 
-    <p class="text-xs text-gray-400">
+    <p class="text-xs text-gray-500">
       {{ formatDate(date) }}
     </p>
   </NuxtLink>
