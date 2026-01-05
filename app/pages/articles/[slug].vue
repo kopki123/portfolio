@@ -18,6 +18,7 @@ useSeoMeta({
 <template>
   <div class="space-y-6">
     <UButton
+      aria-label="返回文章列表"
       to="/articles"
       label="返回文章"
       icon="i-heroicons-arrow-left"

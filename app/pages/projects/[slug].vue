@@ -19,6 +19,7 @@ useSeoMeta({
 <template>
   <div class="space-y-6">
     <UButton
+      aria-label="返回專案列表"
       to="/projects"
       label="返回專案"
       icon="i-heroicons-arrow-left"
@@ -31,6 +32,7 @@ useSeoMeta({
     <header class="space-y-3">
       <div class="flex items-center">
         <UButton
+          :aria-label="page!.title"
           :to="page!.demo"
           label="Live Demo"
           icon="i-heroicons-link"
@@ -40,6 +42,7 @@ useSeoMeta({
           size="sm"
         />
         <UButton
+          :aria-label="page!.title"
           :to="page!.github"
           label="Source Code"
           icon="i-heroicons-code-bracket"

@@ -50,6 +50,8 @@ useSeoMeta({
         size="sm"
         variant="ghost"
         color="neutral"
+        as="a"
+        :aria-label="item?.label"
         target="_blank"
         rel="noopener noreferrer"
       />
@@ -64,6 +66,7 @@ useSeoMeta({
           專案
         </h2>
         <UButton
+          aria-label="查看全部專案"
           to="/projects"
           label="查看全部"
           icon="i-heroicons-arrow-right"
@@ -91,6 +94,7 @@ useSeoMeta({
           文章
         </h2>
         <UButton
+          aria-label="查看全部文章"
           to="/articles"
           label="查看全部"
           icon="i-heroicons-arrow-right"
