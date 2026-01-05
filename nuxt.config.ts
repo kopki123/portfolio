@@ -65,14 +65,6 @@ export default defineNuxtConfig({
       {
         userAgent: '*',
         allow: '/',
-        contentUsage: {
-          'bots': 'y',
-          'train-ai': 'n'
-        },
-        contentSignal: {
-          'ai-train': 'no',
-          'search': 'yes'
-        }
       }
     ],
   },
