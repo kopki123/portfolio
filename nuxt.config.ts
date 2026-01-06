@@ -30,6 +30,19 @@ export default defineNuxtConfig({
     '/rss.xml': { prerender: true },
   },
 
+  app: {
+    head: {
+      title: '個人網站 | Portfolio',
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'alternate', type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' },
+      ],
+    },
+  },
+
   css: ['~/assets/css/main.css'],
 
   colorMode: {

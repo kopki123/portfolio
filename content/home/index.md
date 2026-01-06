@@ -1,5 +1,5 @@
 ---
-title: "個人網站"
+title: "個人網站 | Portfolio"
 description: "👋 嗨，我是李軒婷，一名前端工程師，主要使用 Vue 3 與 TypeScript 開發網頁"
 socials:
   - label: "Github"

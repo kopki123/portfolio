@@ -1,7 +1,7 @@
 ---
 slug: "tetris-battle"
 title: "Tetris Battle"
-period: "2025/01 — 2025/02"
+period: "2025/01 - 2025/02"
 description: "俄羅斯方塊對戰網站，支援即時連線、玩家配對與雙人對戰同步。"
 tags:
   - Vue 3

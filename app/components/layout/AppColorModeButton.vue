@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 const colorMode = useColorMode();
 
 const switchTheme = () => {
@@ -18,9 +18,7 @@ const startViewTransition = (event: MouseEvent) => {
     Math.max(y, window.innerHeight - y)
   );
 
-  const transition = document.startViewTransition(() => {
-    switchTheme();
-  });
+  const transition = document.startViewTransition(() => switchTheme());
 
   transition.ready.then(() => {
     const duration = 600;

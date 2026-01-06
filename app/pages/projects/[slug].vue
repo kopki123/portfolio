@@ -9,17 +9,12 @@ const { data: page } = await useAsyncData(path.value, () => {
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Not Found' });
 }
-
-useSeoMeta({
-  title: () => `${page.value!.title} | 專案`,
-  description: () => page.value!.description || ''
-});
 </script>
 
 <template>
   <div class="space-y-6">
     <UButton
-      aria-label="返回專案列表"
+      aria-label="Back to projects"
       to="/projects"
       label="返回專案"
       icon="i-heroicons-arrow-left"
@@ -28,7 +23,6 @@ useSeoMeta({
       size="sm"
     />
 
-    <!-- Header -->
     <header class="space-y-3">
       <div class="flex items-center">
         <UButton
@@ -70,7 +64,7 @@ useSeoMeta({
       loading="lazy"
     />
 
-    <p class="text-sm leading-8">
+    <p class="text-sm">
       {{ page!.description }}
     </p>
 

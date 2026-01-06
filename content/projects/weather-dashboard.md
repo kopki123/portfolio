@@ -1,7 +1,7 @@
 ---
 slug: "weather-dashboard"
 title: "Weather Dashboard"
-period: "2025/03 — 2025/04"
+period: "2025/03 - 2025/04"
 description: "天氣資訊網頁應用程式，提供即時天氣查詢、城市收藏與個人化顯示設定。"
 tags:
   - React

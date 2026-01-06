@@ -1,4 +1,6 @@
 ---
+title: 關於
+description: 介紹我的背景與經歷。
 experiences:
   - company: "玩藝國際股份有限公司"
     role: "前端工程師"

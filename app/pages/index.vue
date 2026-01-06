@@ -25,10 +25,6 @@ if (!home.value) {
 }
 
 defineOgImageComponent('BlogPost');
-useSeoMeta({
-  title: () => home.value?.title ?? '個人網站',
-  description: () => home.value?.description ?? ''
-});
 </script>
 
 <template>
@@ -36,7 +32,6 @@ useSeoMeta({
     <ContentRenderer
       v-if="home"
       :value="home"
-      class="leading-8 space-y-3"
     />
 
     <div class="flex items-center gap-2 mt-4">
@@ -65,7 +60,7 @@ useSeoMeta({
           專案
         </h2>
         <UButton
-          aria-label="查看全部專案"
+          aria-label="View all projects"
           to="/projects"
           label="查看全部"
           icon="i-heroicons-arrow-right"
@@ -93,7 +88,7 @@ useSeoMeta({
           文章
         </h2>
         <UButton
-          aria-label="查看全部文章"
+          aria-label="View all articles"
           to="/articles"
           label="查看全部"
           icon="i-heroicons-arrow-right"

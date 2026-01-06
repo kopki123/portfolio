@@ -8,7 +8,7 @@ export default defineContentConfig({
       source: 'home/*.md',
       schema: z.object({
         title: z.string(),
-        description: z.string().optional(),
+        description: z.string(),
         tags: z.array(z.string()).optional().default([]),
         socials: z.array(z.object({
           label: z.string(),
@@ -25,6 +25,8 @@ export default defineContentConfig({
       type: 'page',
       source: 'about/*.md',
       schema: z.object({
+        title: z.string(),
+        description: z.string(),
         experiences: z.array(z.object({
           company: z.string(),
           role: z.string(),

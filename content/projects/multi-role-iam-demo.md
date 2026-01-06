@@ -1,7 +1,7 @@
 ---
 slug: "multi-role-iam-demo"
 title: "Multi Role IAM Demo"
-period: "2025/08 — 2025/09"
+period: "2025/08 - 2025/09"
 description: "多角色帳號管理系統 Demo，實作基本 IAM 權限概念與前端資料管理流程。"
 tags:
   - Nuxt 3

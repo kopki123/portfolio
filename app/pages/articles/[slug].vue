@@ -8,17 +8,12 @@ const { data: page } = await useAsyncData(route.path, () => {
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Article Not Found' });
 }
-
-useSeoMeta({
-  title: () => `${page.value!.title} | 文章`,
-  description: () => page.value!.description || ''
-});
 </script>
 
 <template>
   <div class="space-y-6">
     <UButton
-      aria-label="返回文章列表"
+      aria-label="Back to articles"
       to="/articles"
       label="返回文章"
       icon="i-heroicons-arrow-left"

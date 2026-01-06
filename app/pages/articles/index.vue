@@ -5,20 +5,12 @@ const { data: articles } = await useAsyncData('articles', () => {
     .order('date', 'DESC')
     .all();
 });
-
-useSeoMeta({
-  title: '文章',
-  description: '紀錄我的學習、靈感與實作過程。'
-});
 </script>
 
 <template>
   <main class="max-w-2xl mx-auto space-y-8">
     <div class="space-y-2">
-      <h1
-        class="text-2xl font-semibold"
-        href="#/articles"
-      >
+      <h1 class="text-2xl font-semibold">
         文章
       </h1>
 

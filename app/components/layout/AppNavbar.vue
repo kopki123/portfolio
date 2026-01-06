@@ -1,5 +1,7 @@
 
 <script setup lang="ts">
+import AppColorModeButton from './AppColorModeButton.vue';
+
 const route = useRoute();
 
 const links = [
@@ -16,11 +18,11 @@ const links = [
       class="
         flex items-center justify-between
         max-w-md
-        my-4 mx-auto
-        px-4 py-3
+        mx-auto my-4
+        px-4 py-2
         rounded-full
-        shadow-lg shadow-gray-800/15
-        bg-white/20 dark:bg-gray-800/30 backdrop-blur ring-1 dark:ring-white/20 ring-gray-900/5
+        shadow-lg shadow-gray-800/20
+        backdrop-blur ring-1 ring-gray-900/5 dark:ring-white/20
       "
     >
       <div class="flex items-center gap-2">
@@ -30,28 +32,17 @@ const links = [
           :text="item.label"
         >
           <UButton
-            as="a"
             :to="item.to"
-            :aria-label="item.label"
             :icon="item.icon"
             :color="route.path === item.to ? 'primary' : 'neutral'"
+            as="a"
+            :aria-label="item.label"
             variant="ghost"
           />
         </UTooltip>
       </div>
 
       <div class="space-x-2">
-        <UButton
-          as="a"
-          href="/resume.pdf"
-          download
-          external
-          aria-label="Download resume"
-          icon="i-heroicons-arrow-down-tray"
-          color="neutral"
-          variant="ghost"
-        />
-
         <AppColorModeButton />
       </div>
     </nav>

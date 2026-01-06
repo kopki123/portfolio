@@ -38,6 +38,7 @@ const socials = computed(() => {
         as="a"
         :href="item.url"
         :aria-label="item.label"
+        external
         target="_blank"
         rel="noopener noreferrer"
       />

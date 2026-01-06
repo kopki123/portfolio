@@ -1,25 +1,16 @@
 <script setup lang="ts">
-
 const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects')
     .select('path', 'title', 'description', 'cover', 'tags', 'period', 'slug', 'github', 'demo', 'date')
     .order('date', 'DESC')
     .all();
 });
-
-useSeoMeta({
-  title: '專案',
-  description: '我在學習完成的一些專案。'
-});
 </script>
 
 <template>
   <main class="max-w-2xl mx-auto space-y-8">
     <div class="space-y-2">
-      <h1
-        class="text-2xl font-semibold"
-        href="#/projects"
-      >
+      <h1 class="text-2xl font-semibold">
         專案
       </h1>
 

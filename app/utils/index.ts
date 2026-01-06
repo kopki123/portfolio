@@ -1,25 +1,33 @@
-const zhDateFormatter = new Intl.DateTimeFormat('zh-TW', {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric',
-});
+type DateInput = Date | string | number;
 
-export function formatDate(dateString: string): string {
-  const date = new Date(dateString);
+type FormatDateOptions = {
+  locale?: string;           // e.g. 'zh-TW', 'en-US'
+  timeZone?: string;         // e.g. 'Asia/Taipei'
+  options?: Intl.DateTimeFormatOptions;
+  fallback?: string;
+};
+
+export function formatDate(input: DateInput, config: FormatDateOptions = {}) {
+  const {
+    locale = 'zh-TW',
+    timeZone = 'Asia/Taipei',
+    options,
+    fallback = '',
+  } = config;
+
+  const date = input instanceof Date ? input : new Date(input);
+
   if (Number.isNaN(date.getTime())) {
-    return dateString;
+    return fallback;
   }
 
-  let year: string | undefined;
-  let month: string | undefined;
-  let day: string | undefined;
+  const formatter = new Intl.DateTimeFormat(locale, {
+    timeZone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    ...options,
+  });
 
-
-  for (const part of zhDateFormatter.formatToParts(date)) {
-    if (part.type === 'year') year = part.value;
-    else if (part.type === 'month') month = part.value;
-    else if (part.type === 'day') day = part.value;
-  }
-
-  return year && month && day ? `${year} 年 ${month} 月 ${day} 日` : dateString;
+  return formatter.format(date);
 }
