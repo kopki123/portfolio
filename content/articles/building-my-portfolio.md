@@ -21,7 +21,7 @@ Portfolio 網站的目標：
 
 ### 技術選擇
 
-- **Nuxt 3 + TypeScript**：整體架構與型別安全
+- **Nuxt 4 + TypeScript**：整體架構與型別安全
 - **Nuxt UI + Tailwind CSS**：一致且簡潔的介面
 - **Nuxt Content**：用 Markdown 管理文章與專案內容
 - **SEO 基礎優化**：設定 Meta / Open Graph，並提供 sitemap 與 robots.txt，提升搜尋引擎可索引性與分享預覽效果
