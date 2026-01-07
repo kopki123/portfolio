@@ -24,7 +24,7 @@ if (!home.value) {
   throw createError({ statusCode: 404, statusMessage: 'Home content not found' });
 }
 
-defineOgImageComponent('BlogPost');
+// defineOgImageComponent('BlogPost');
 </script>
 
 <template>

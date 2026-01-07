@@ -2,7 +2,7 @@
 import AppNavbar from '~/components/layout/AppNavbar.vue';
 import AppFooter from '~/components/layout/AppFooter.vue';
 import BackToTopButton from '~/components/layout/BackToTopButton.vue';
-import portfolioUrl from '~/assets/images/portfolio.webp';
+import portfolioUrl from '~/assets/images/portfolio.png';
 
 const { data: homeMeta } = await useAsyncData('home-meta', () => {
   return queryCollection('home')
@@ -10,7 +10,7 @@ const { data: homeMeta } = await useAsyncData('home-meta', () => {
     .first();
 });
 
-const title = computed(() => homeMeta.value?.title || 'Portfolio');
+const title = computed(() => homeMeta.value?.title || '');
 const description = computed(() => homeMeta.value?.description || '');
 
 useSeoMeta({
