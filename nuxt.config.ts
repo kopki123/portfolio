@@ -32,7 +32,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: '個人網站 | Portfolio',
       htmlAttrs: {
         lang: 'zh-Hant',
       },
@@ -67,6 +66,7 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    name: 'Portfolio｜個人作品集網站'
   },
 
   ogImage: {
