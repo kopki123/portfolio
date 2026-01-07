@@ -23,8 +23,6 @@ const latestArticles = computed(() => articles.value?.slice(0, 3) ?? []);
 if (!home.value) {
   throw createError({ statusCode: 404, statusMessage: 'Home content not found' });
 }
-
-// defineOgImageComponent('BlogPost');
 </script>
 
 <template>
