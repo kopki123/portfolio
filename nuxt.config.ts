@@ -32,8 +32,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      titleTemplate: '%s | Portfolio',
       htmlAttrs: {
-        lang: 'zh-Hant',
+        lang: 'zh-TW',
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -41,6 +42,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+
 
   css: ['~/assets/css/main.css'],
 
@@ -66,7 +69,6 @@ export default defineNuxtConfig({
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    name: 'Portfolio｜個人作品集網站'
   },
 
   ogImage: {
