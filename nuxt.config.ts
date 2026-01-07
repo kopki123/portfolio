@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     head: {
       title: '個人網站 | Portfolio',
       htmlAttrs: {
-        lang: 'en',
+        lang: 'zh-Hant',
       },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -87,7 +87,7 @@ export default defineNuxtConfig({
   },
 
   devServer: {
-    // host: '0.0.0.0',
+    host: '0.0.0.0',
     port: 3000,
   },
 });
