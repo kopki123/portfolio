@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const { data: projects } = await useAsyncData('projects', () => {
   return queryCollection('projects')
     .select('path', 'title', 'description', 'cover', 'tags', 'period', 'slug', 'github', 'demo', 'date')
@@ -11,11 +12,11 @@ const { data: projects } = await useAsyncData('projects', () => {
   <main class="max-w-2xl mx-auto space-y-8">
     <div class="space-y-2">
       <h1 class="text-2xl font-semibold">
-        專案
+        {{ t('projects.title') }}
       </h1>
 
       <p class="text-gray-500 text-sm">
-        以下是我在學習中完成的一些專案
+        {{ t('projects.description') }}
       </p>
     </div>
 

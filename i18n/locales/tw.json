@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "首頁",
+    "about": "關於",
+    "projects": "專案",
+    "articles": "文章"
+  },
+  "home": {
+    "featuredProjects": "精選專案",
+    "viewAllProjects": "查看全部專案",
+    "latestArticles": "最新文章",
+    "viewAllArticles": "查看全部文章"
+  },
+  "projects": {
+    "title": "專案",
+    "description": "紀錄在學習過程中完成的專案與練習。",
+    "back": "返回專案列表",
+    "liveDemo": "線上展示",
+    "sourceCode": "原始碼"
+  },
+  "articles": {
+    "title": "文章",
+    "description": "整理學習筆記與實作心得。",
+    "back": "返回文章列表"
+  },
+  "about": {
+    "title": "關於我",
+    "experiences": "工作經驗",
+    "contact": "聯絡方式"
+  },
+  "common": {
+    "backToTop": "回到頂部",
+    "switchTo": "切換為{mode}模式",
+    "languageSwitcher": "語言切換",
+    "mode": {
+      "light": "淺色",
+      "dark": "深色"
+    }
+  },
+  "footer": {
+    "copyright": "\u00a9 {year}。保留所有權利。"
+  }
+}

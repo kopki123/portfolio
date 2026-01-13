@@ -1,5 +1,10 @@
 ﻿<script setup lang="ts">
+const { t } = useI18n();
 const colorMode = useColorMode();
+const targetMode = computed(() => colorMode.value === 'dark' ? 'light' : 'dark');
+const ariaLabel = computed(() => t('common.switchTo', {
+  mode: t(`common.mode.${targetMode.value}`),
+}));
 
 const switchTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
@@ -42,7 +47,7 @@ const startViewTransition = (event: MouseEvent) => {
 <template>
   <ClientOnly>
     <UButton
-      :aria-label="`Switch to ${colorMode.value === 'dark' ? 'light' : 'dark'} mode`"
+      :aria-label="ariaLabel"
       :icon="`${colorMode.value === 'dark' ? 'i-heroicons-moon' : 'i-heroicons-sun'}`"
       color="neutral"
       variant="ghost"

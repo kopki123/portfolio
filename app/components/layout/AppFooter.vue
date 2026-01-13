@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
+const { t } = useI18n();
 
 const { data: home } = await useAsyncData('footer-socials', () => {
   return queryCollection('home')
@@ -24,7 +25,7 @@ const socials = computed(() => {
 <template>
   <footer class="flex items-center justify-between max-w-2xl w-full mx-auto mt-12 mb-6 px-4">
     <p class="text-sm text-gray-500">
-      © {{ currentYear }}. All rights reserved.
+      {{ t('footer.copyright', { year: currentYear }) }}
     </p>
 
     <div class="flex gap-2">

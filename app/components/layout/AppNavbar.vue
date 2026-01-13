@@ -1,15 +1,35 @@
-
 <script setup lang="ts">
 import AppColorModeButton from './AppColorModeButton.vue';
 
 const route = useRoute();
+const { t, locale, locales, setLocale } = useI18n();
+const localePath = useLocalePath();
 
-const links = [
-  { label: '首頁', to: '/', icon: 'i-heroicons-home' },
-  { label: '關於', to: '/about', icon: 'i-heroicons-user' },
-  { label: '專案', to: '/projects', icon: 'i-heroicons-folder' },
-  { label: '文章', to: '/articles', icon: 'i-heroicons-document-text' },
+const navItems = [
+  { key: 'home', path: '/', icon: 'i-heroicons-home' },
+  { key: 'about', path: '/about', icon: 'i-heroicons-user' },
+  { key: 'projects', path: '/projects', icon: 'i-heroicons-folder' },
+  { key: 'articles', path: '/articles', icon: 'i-heroicons-document-text' },
 ];
+
+const links = computed(() => navItems.map((item) => ({
+  ...item,
+  label: t(`nav.${item.key}`),
+  to: localePath(item.path),
+})));
+
+const localeOptions = computed(() => (locales.value || []).map((item) => ({
+  code: item.code,
+  label: item.name || item.code.toUpperCase(),
+})));
+
+const changeLocale = async (code: string) => {
+  if (code === locale.value) {
+    return;
+  }
+
+  await setLocale(code);
+};
 </script>
 
 <template>
@@ -42,7 +62,34 @@ const links = [
         </UTooltip>
       </div>
 
-      <div class="space-x-2">
+      <div class="flex items-center gap-2">
+        <UFieldGroup
+          v-if="localeOptions.length"
+          size="sm"
+          :aria-label="t('common.languageSwitcher')"
+          class="hidden sm:inline-flex"
+        >
+          <UButton
+            v-for="option in localeOptions"
+            :key="option.code"
+            :label="option.label"
+            :color="locale === option.code ? 'primary' : 'neutral'"
+            variant="ghost"
+            @click="changeLocale(option.code)"
+          />
+        </UFieldGroup>
+
+        <USelectMenu
+          v-if="localeOptions.length"
+          v-model="locale"
+          :options="localeOptions"
+          value-attribute="code"
+          option-attribute="label"
+          size="sm"
+          class="sm:hidden"
+          :aria-label="t('common.languageSwitcher')"
+        />
+
         <AppColorModeButton />
       </div>
     </nav>

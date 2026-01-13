@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const { t } = useI18n();
+const localePath = useLocalePath();
+
 const { data: home } = await useAsyncData('home', () => {
   return queryCollection('home').first();
 });
@@ -55,12 +58,12 @@ if (!home.value) {
     >
       <div class="flex items-center justify-between">
         <h2 class="text-2xl font-semibold">
-          專案
+          {{ t('home.featuredProjects') }}
         </h2>
         <UButton
-          aria-label="View all projects"
-          to="/projects"
-          label="查看全部"
+          :aria-label="t('home.viewAllProjects')"
+          :to="localePath('/projects')"
+          :label="t('home.viewAllProjects')"
           icon="i-heroicons-arrow-right"
           variant="link"
           color="neutral"
@@ -83,12 +86,12 @@ if (!home.value) {
     >
       <div class="flex items-center justify-between">
         <h2 class="text-2xl font-semibold">
-          文章
+          {{ t('home.latestArticles') }}
         </h2>
         <UButton
-          aria-label="View all articles"
-          to="/articles"
-          label="查看全部"
+          :aria-label="t('home.viewAllArticles')"
+          :to="localePath('/articles')"
+          :label="t('home.viewAllArticles')"
           icon="i-heroicons-arrow-right"
           variant="link"
           color="neutral"

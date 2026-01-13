@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const route = useRoute();
+const { t } = useI18n();
+const localePath = useLocalePath();
+const slug = computed(() => String(route.params.slug));
 
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection('articles').path(route.path).first();
-});
+const { data: page } = await useAsyncData(
+  `article-${slug.value}`,
+  () => queryCollection('articles').where('slug', slug.value).first()
+);
 
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Article Not Found' });
@@ -13,9 +17,9 @@ if (!page.value) {
 <template>
   <div class="space-y-6">
     <UButton
-      aria-label="Back to articles"
-      to="/articles"
-      label="返回文章"
+      :aria-label="t('articles.back')"
+      :to="localePath('/articles')"
+      :label="t('articles.back')"
       icon="i-heroicons-arrow-left"
       color="neutral"
       variant="link"

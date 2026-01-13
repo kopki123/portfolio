@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const route = useRoute();
-const path = computed(() => `/projects/${route.params.slug}`);
+const slug = computed(() => String(route.params.slug));
+const path = computed(() => `/projects/${slug.value}`);
+const { t } = useI18n();
+const localePath = useLocalePath();
 
 const { data: page } = await useAsyncData(path.value, () => {
   return queryCollection('projects').path(path.value).first();
@@ -14,9 +17,9 @@ if (!page.value) {
 <template>
   <div class="space-y-6">
     <UButton
-      aria-label="Back to projects"
-      to="/projects"
-      label="返回專案"
+      :aria-label="t('projects.back')"
+      :to="localePath('/projects')"
+      :label="t('projects.back')"
       icon="i-heroicons-arrow-left"
       color="neutral"
       variant="link"
@@ -28,7 +31,7 @@ if (!page.value) {
         <UButton
           :aria-label="page!.title"
           :to="page!.demo"
-          label="Live Demo"
+          :label="t('projects.liveDemo')"
           icon="i-heroicons-link"
           target="_blank"
           color="neutral"
@@ -38,7 +41,7 @@ if (!page.value) {
         <UButton
           :aria-label="page!.title"
           :to="page!.github"
-          label="Source Code"
+          :label="t('projects.sourceCode')"
           icon="i-heroicons-code-bracket"
           target="_blank"
           color="neutral"

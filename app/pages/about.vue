@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 const { data: about } = await useAsyncData('about', () => {
   return queryCollection('about').first();
 });
@@ -20,7 +22,7 @@ const socials = computed(() => home.value?.socials ?? []);
   <main class="max-w-2xl mx-auto space-y-12">
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold">
-        關於
+        {{ t('about.title') }}
       </h2>
 
       <ContentRenderer
@@ -32,10 +34,10 @@ const socials = computed(() => home.value?.socials ?? []);
 
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold">
-        經歷摘要
+        {{ t('about.experiences') }}
       </h2>
 
-            <ul class="space-y-3">
+      <ul class="space-y-3">
         <li
           v-for="(item, index) in about?.experiences"
           :key="index"
@@ -60,7 +62,7 @@ const socials = computed(() => home.value?.socials ?? []);
 
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold">
-        聯絡方式
+        {{ t('about.contact') }}
       </h2>
 
       <ul class="space-y-3">

@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/seo',
     'nuxt-gtag',
+    '@nuxtjs/i18n',
   ],
 
   sourcemap: {
@@ -33,9 +34,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       titleTemplate: '%s | Portfolio',
-      htmlAttrs: {
-        lang: 'zh-TW',
-      },
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'alternate', type: 'application/rss+xml', title: 'RSS', href: '/rss.xml' },
@@ -43,7 +41,19 @@ export default defineNuxtConfig({
     },
   },
 
-
+  i18n: {
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'tw', iso: 'zh-TW', name: '繁體中文', file: 'tw.json' },
+    ],
+    defaultLocale: 'tw',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+  },
 
   css: ['~/assets/css/main.css'],
 

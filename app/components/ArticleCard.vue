@@ -5,11 +5,12 @@ defineProps<{
   date: string
 }>();
 
+const localePath = useLocalePath();
 </script>
 
 <template>
   <NuxtLink
-    :to="`/articles/${slug}`"
+    :to="localePath(`/articles/${slug}`)"
     class="space-y-2 hover:cursor-pointer"
   >
     <p class="font-semibold">

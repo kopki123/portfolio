@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { t } = useI18n();
 const isVisible = ref(false);
 
 const updateVisibility = () => {
@@ -26,7 +27,7 @@ onBeforeUnmount(() => {
       :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'"
     >
       <UButton
-        aria-label="Back to top"
+        :aria-label="t('common.backToTop')"
         icon="i-heroicons-arrow-up"
         color="neutral"
         variant="soft"

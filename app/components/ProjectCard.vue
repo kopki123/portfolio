@@ -5,10 +5,12 @@ defineProps<{
   description: string
   tags: string[]
 }>();
+
+const localePath = useLocalePath();
 </script>
 
 <template>
-  <NuxtLink :to="`/projects/${slug}`">
+  <NuxtLink :to="localePath(`/projects/${slug}`)">
     <UCard class="h-full shadow-md hover:cursor-pointer hover:shadow-primary-300 dark:hover:shadow-primary-300/70">
       <div class="space-y-3">
         <p class="font-semibold">

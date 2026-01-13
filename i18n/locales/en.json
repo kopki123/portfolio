@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "articles": "Articles"
+  },
+  "home": {
+    "featuredProjects": "Featured projects",
+    "viewAllProjects": "View all projects",
+    "latestArticles": "Latest articles",
+    "viewAllArticles": "View all articles"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Side projects and practice work completed while learning.",
+    "back": "Back to projects",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code"
+  },
+  "articles": {
+    "title": "Articles",
+    "description": "Notes and reflections from learning and experiments.",
+    "back": "Back to articles"
+  },
+  "about": {
+    "title": "About",
+    "experiences": "Work experience",
+    "contact": "Contact"
+  },
+  "common": {
+    "backToTop": "Back to top",
+    "switchTo": "Switch to {mode} mode",
+    "languageSwitcher": "Language switcher",
+    "mode": {
+      "light": "light",
+      "dark": "dark"
+    }
+  },
+  "footer": {
+    "copyright": "\u00a9 {year}. All rights reserved."
+  }
+}

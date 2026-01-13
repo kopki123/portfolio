@@ -12,6 +12,7 @@ const { data: homeMeta } = await useAsyncData('home-meta', () => {
 
 const title = computed(() => homeMeta.value?.title || '');
 const description = computed(() => homeMeta.value?.description || '');
+const { localeProperties } = useI18n();
 
 useSeoMeta({
   title,
@@ -23,6 +24,12 @@ useSeoMeta({
   twitterDescription: description,
   twitterImage: portfolioUrl,
 });
+
+useHead(() => ({
+  htmlAttrs: {
+    lang: localeProperties.value?.iso || localeProperties.value?.code,
+  },
+}));
 </script>
 
 <template>
