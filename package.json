@@ -15,6 +15,7 @@
     "test:nuxt": "vitest --project nuxt"
   },
   "dependencies": {
+    "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/content": "^3.10.0",
     "@nuxt/eslint": "^1.12.1",
     "@nuxt/hints": "^1.0.0-alpha.5",

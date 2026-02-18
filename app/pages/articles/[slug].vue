@@ -43,9 +43,11 @@ if (!page.value) {
       />
     </div>
 
-    <ContentRenderer
-      v-if="page"
-      :value="page"
-    />
+    <main>
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
+    </main>
   </div>
 </template>

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/hints',
+    '@nuxt/a11y',
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
@@ -15,20 +16,7 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
-  sourcemap: {
-    server: true,
-    client: true,
-  },
-
-  runtimeConfig: {
-    public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-    },
-  },
-
-  routeRules: {
-    '/rss.xml': { prerender: true },
-  },
+  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
@@ -43,9 +31,36 @@ export default defineNuxtConfig({
     },
   },
 
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    },
+  },
 
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  },
 
-  css: ['~/assets/css/main.css'],
+  ogImage: {
+    componentOptions: {
+      global: true,
+    },
+  },
+
+  robots: {
+    blockNonSeoBots: true,
+    blockAiBots: true,
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+    ],
+  },
+
+  routeRules: {
+    '/rss.xml': { prerender: true },
+  },
 
   colorMode: {
     preference: 'system',
@@ -56,7 +71,7 @@ export default defineNuxtConfig({
     enabled: process.env.NODE_ENV === 'production',
     id: process.env.NUXT_PUBLIC_GTAG_ID,
     initCommands: [
-      // Setup up consent mode
+      // Setup consent mode
       ['consent', 'default', {
         ad_user_data: 'denied',
         ad_personalization: 'denied',
@@ -67,25 +82,9 @@ export default defineNuxtConfig({
     ],
   },
 
-  site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  },
-
-  ogImage: {
-    componentOptions: {
-      global: true,
-    }
-  },
-
-  robots: {
-    blockNonSeoBots: true,
-    blockAiBots: true,
-    groups: [
-      {
-        userAgent: '*',
-        allow: '/',
-      }
-    ],
+  sourcemap: {
+    server: true,
+    client: true,
   },
 
   devServer: {
