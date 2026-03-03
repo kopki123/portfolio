@@ -1,7 +1,7 @@
 ---
 slug: "admin-prime"
 title: "Admin Prime"
-period: "2026/03 - 進行中"
+period: "2026/02 - 進行中"
 description: "以 Vue 3 + TypeScript + Vite 建立的後台模板，聚焦可擴充版型、權限路由流程與可重用 API 串接基礎。"
 tags:
   - Vue 3

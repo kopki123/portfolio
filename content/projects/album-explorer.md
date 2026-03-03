@@ -1,7 +1,7 @@
 ---
 slug: "album-explorer"
 title: "Album Explorer"
-period: "2026/02 - 進行中"
+period: "2026/01 - 進行中"
 description: "以 Nx Monorepo 架構打造的全端專案，整合 Nuxt 4 前端、NestJS 11 後端與 PostgreSQL，提供專輯瀏覽與管理 API。"
 tags:
   - Nx
